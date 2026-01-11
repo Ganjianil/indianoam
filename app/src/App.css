@@ -1715,7 +1715,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   width: 100%;
   
   /* SET YOUR BACKGROUND IMAGE HERE */
-  background: url('oamowner.jpeg') no-repeat center center; 
+  background: url('/oamowner.jpeg') no-repeat center center; 
   background-size: cover; 
   
   /* Flexbox to center the content */
