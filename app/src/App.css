@@ -1332,7 +1332,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   position: relative;
   height: 90vh; /* Ideal height for desktop and mobile */
   width: 100%;
-  background: url('oam9.jpeg') no-repeat center center/cover;
+  background: url('/oam9.jpeg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1449,7 +1449,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   width: 100%;
   /* Use 'contain' if you want to see the whole poster, 
      or 'cover' with fixed attachment for a premium feel */
-  background: url('oam9.jpeg') no-repeat center center/cover;
+  background: url('/oam9.jpeg') no-repeat center center/cover;
   background-attachment: fixed; /* Prevents the 'zoomed' feeling during scroll */
   display: flex;
   align-items: center;
@@ -1527,7 +1527,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   min-height: 100vh; /* Fills the screen */
   width: 100%;
   /* Fixes the "zoomed" feeling by using cover and center */
-  background: url('oam9.jpeg') no-repeat center center;
+  background: url('/oam9.jpeg') no-repeat center center;
   background-size: cover; 
   display: flex;
   align-items: center; /* Vertical Center */
@@ -1830,7 +1830,7 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   width: 100%;
   
   /* Set the background image */
-  background-image: url('oamowner.jpeg');
+  background-image: url('/oamowner.jpeg');
   background-repeat: no-repeat;
   
   /* FIX: background-position: center top ensures the head is visible first */
@@ -1931,5 +1931,58 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
     bottom: 10px;
     right: 10px;
     transform: scale(0.8); /* Shrinks badge to fit mobile screen */
+  }
+}
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  
+  /* ADD THE FORWARD SLASH / BEFORE THE NAME */
+  /* This tells the server to look in the 'public' folder */
+  background: url('/oamowner.jpeg') no-repeat center center; 
+  background-size: cover; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* --- DESKTOP VIEW --- */
+.hero-wrapper {
+  display: flex;
+  flex-direction: row; /* Side by side */
+  align-items: center;
+  gap: 50px;
+}
+
+.hero-doctor-photo {
+  width: 100%;
+  max-width: 450px;
+  object-fit: cover;
+  /* KEY: Ensures the head is never cut off on desktop */
+  object-position: top; 
+  border-radius: 20px;
+}
+
+/* --- MOBILE VIEW --- */
+@media (max-width: 768px) {
+  .hero-wrapper {
+    flex-direction: column; /* Stacks photo on top, text below */
+    text-align: center;
+  }
+
+  .hero-image-container {
+    order: 1; /* Forces photo to stay at the top */
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero-text {
+    order: 2; /* Content moves below the face */
+    padding: 0 20px;
+  }
+
+  .hero-doctor-photo {
+    max-width: 300px; /* Comfortable size for phones */
   }
 }
