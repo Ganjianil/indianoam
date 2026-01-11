@@ -1,37 +1,37 @@
 import React from "react";
 
 const Services = () => {
-  const phone = "9000347369";
+  const phone = "8985372009";
 
   const serviceList = [
     {
-      title: "Dry Needling",
-      src: "need.webp", // Local file in public folder
-      desc: "Targeting myofascial trigger points to relieve deep muscle pain and tension.",
+      title: "Yoga Sakthi",
+      src: "yokashak.webp",
+      desc: "Harnessing internal energy through traditional Yoga Sakthi Chikitsa for holistic healing.",
     },
     {
-      title: "Cupping Therapy",
-      src: "cuppi.webp", // Local file in public folder
-      desc: "Traditional suction therapy to improve blood flow and reduce inflammation.",
+      title: "Acupressure",
+      src: "accupresure.jpg",
+      desc: "Applying precise pressure to key points to stimulate the body's natural self-curative abilities.",
     },
     {
-      title: "Acupuncture for Pain",
-      src: "body.jpg", // Local file in public folder
-      desc: "Specialized root-cause cure for Back, Knee, and Cervical pain.",
+      title: "Multi-Therapies",
+      src: "multi.webp",
+      desc: "A combined drugless approach using multiple traditional sciences for root-cause cures.",
     },
     {
       title: "Mental Wellness",
-      src: "ment.webp", // Local file in public folder
-      desc: "Counseling for depression, stress, and anxiety using Yoga Sakthi.",
+      src: "ment.webp",
+      desc: "Counseling for depression, stress, and anxiety using Yoga Sakthi principles.",
     },
     {
       title: "Meditation & Stress",
-      src: "medi.webp", // Local file in public folder
-      desc: "Prana Sakthi training to achieve emotional and mental stability.",
+      src: "medi.webp",
+      desc: "Prana Sakthi training to achieve lasting emotional and mental stability.",
     },
     {
       title: "Home Visit Therapy",
-      src: "home.webp", // Local file in public folder
+      src: "home.webp",
       desc: "Bringing professional drugless treatment to your doorstep in Vijayawada.",
     },
   ];
@@ -56,7 +56,6 @@ const Services = () => {
           {serviceList.map((service, index) => (
             <div className="service-card" key={index}>
               <div className="service-img-container">
-                {/* FIXED: Using service.src to match the array above */}
                 <img src={service.src} alt={service.title} loading="lazy" />
                 <div className="img-overlay">
                   <button

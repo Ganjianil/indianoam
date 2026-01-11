@@ -32,12 +32,12 @@ const Footer = () => {
         <div className="footer-col contact">
           <h4>Connect</h4>
           <p>📍 Ashok Nagar, Vijayawada</p>
-          <p>📞 9000347369</p>
+          <p>📞 8985372009</p>
           <p>✉️ indianoam@gmail.com</p>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2026 Dr. Oam Wellness. All Rights Reserved.</p>
+        <p>&copy; 2026 Indian Oam Holistic Health Care. All Rights Reserved.</p>
       </div>
     </footer>
   );

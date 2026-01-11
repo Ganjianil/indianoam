@@ -1709,3 +1709,227 @@ body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background:
   color: #1b4332;
   text-align: center;
 }
+.hero-section {
+  position: relative;
+  min-height: 100vh; /* Full screen height */
+  width: 100%;
+  
+  /* SET YOUR BACKGROUND IMAGE HERE */
+  background: url('oamowner.jpeg') no-repeat center center; 
+  background-size: cover; 
+  
+  /* Flexbox to center the content */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* This darkens the image so your white text is easy to read */
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2; /* Sits above the overlay */
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+}
+
+/* Ensure the badge stays on top too */
+.hero-badge {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  z-index: 3;
+  /* Add your existing badge styling here */
+}
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #f4f7f5; /* Light professional background */
+  padding: 80px 0;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-direction: row; /* Side by side on desktop */
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left; /* Better for readability when image is present */
+  color: #1b4332;
+}
+
+.hero-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.doctor-img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+  object-fit: contain; /* Ensures face is never cut */
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  background: #2d6a4f;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- MOBILE FIX --- */
+@media (max-width: 992px) {
+  .hero-container {
+    flex-direction: column-reverse; /* Put image on top of text for mobile */
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .doctor-img {
+    max-width: 300px; /* Smaller image for mobile */
+  }
+
+  .hero-badge {
+    right: 20px;
+    bottom: 10px;
+    transform: scale(0.8);
+  }
+}
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  
+  /* Set the background image */
+  background-image: url('oamowner.jpeg');
+  background-repeat: no-repeat;
+  
+  /* FIX: background-position: center top ensures the head is visible first */
+  background-position: center 10%; 
+  
+  /* Use 'cover' to fill space, but we will adjust it for desktop below */
+  background-size: cover; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* DESKTOP SPECIFIC ADJUSTMENT */
+@media (min-width: 1024px) {
+  .hero-section {
+    /* For wide screens, 'contain' ensures the WHOLE photo fits without cropping */
+    /* Or keep 'cover' but shift the image down */
+    background-size: cover;
+    background-position: center 0%; /* Forces the very top of the image to show */
+  }
+  
+  .hero-content {
+    /* Moves the text down slightly so it doesn't cover the eyes/face */
+    margin-top: 150px; 
+  }
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  /* Use a gradient so the bottom is dark for text, but the top is clear for the face */
+  background: linear-gradient(
+    to bottom, 
+    rgba(0,0,0,0.1) 0%, 
+    rgba(0,0,0,0.7) 100%
+  );
+  z-index: 1;
+}
+@media (min-width: 1024px) {
+  .desktop-align {
+    text-align: left;
+    max-width: 50%; /* Pushes text to the left side */
+    margin-left: 5%;
+    margin-top: 20%; /* Keeps text away from the head */
+  }
+}/* --- Desktop Default (Already in your code) --- */
+.hero-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* --- MOBILE SPECIFIC FIX --- */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 100px; /* Space for the mobile header */
+    min-height: auto;   /* Allows section to grow with content */
+  }
+
+  .hero-wrapper {
+    flex-direction: column; /* Stacks image and text vertically */
+    gap: 20px;
+  }
+
+  .hero-image-container {
+    order: 1; /* Puts the doctor's photo at the VERY TOP */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-text {
+    order: 2; /* Puts the text and buttons BELOW the photo */
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  .image-border-effect {
+    max-width: 280px; /* Limits photo size so it doesn't take the whole screen */
+    height: 350px;    /* Keeps the head perfectly in frame */
+    margin: 0 auto;
+  }
+
+  .hero-title {
+    font-size: 1.8rem; /* Smaller font for mobile readability */
+    margin-top: 10px;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .hero-badge-floating {
+    bottom: 10px;
+    right: 10px;
+    transform: scale(0.8); /* Shrinks badge to fit mobile screen */
+  }
+}
