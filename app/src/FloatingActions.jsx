@@ -1,7 +1,7 @@
 import React from "react";
 
 const FloatingActions = () => {
-  const phone = "8985372009"; //
+  const phone = "+91 8985372009"; //
   const email = "indianoam@gmail.com"; //
 
   return (

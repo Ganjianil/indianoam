@@ -21,9 +21,20 @@ const Hero = () => {
 
         {/* LEFT SIDE (Bottom on Mobile): Text Content */}
         <div className="hero-text">
-          <span className="hero-subtitle">CERTIFIED PROFESSIONAL</span>
-          <h1 className="hero-title">Holistic Healing & Wellness</h1>
           <p className="hero-description">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <h1 className="hero-title">Holistic Healing & Wellness</h1>
             Specializing in Acupuncture, Yoga Sakthi Chikitsa, and Root Cause
             Cures under the expert guidance of{" "}
             <strong>Dr. Makala Satyanarayana</strong>.
